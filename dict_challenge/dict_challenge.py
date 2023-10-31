@@ -56,19 +56,19 @@ def select_dict_key() -> str:
 
     # Display menu
     for idx, key in enumerate(keys):
-        print(f"{idx}. {key}")
+        print(f"{idx+1}. {key}")
 
     # Get user selection
-    invalid_key_selected = False
-    while not invalid_key_selected:
+    valid_key_selected = False
+    while not valid_key_selected:
         key_idx = input("Select a key: ")
 
-        if key_idx.isnumeric() and 0 <= int(key_idx) <= len(keys):
-            invalid_key_selected = True
-            key_idx = int(key_idx)
+        if key_idx.isnumeric() and 1 <= int(key_idx) <= len(keys):
+            valid_key_selected = True
+            key_idx = int(key_idx) - 1
             key = keys[key_idx]
         else:
-            print("Invalid key, please try again.")
+            print("Invalid key, please try again.\n")
     return key
 
 def handle_get_item():
