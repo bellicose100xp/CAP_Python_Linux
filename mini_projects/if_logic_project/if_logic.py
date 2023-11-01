@@ -3,15 +3,18 @@ import random
 from if_logic_colors import Color
 
 
+def displayBanner():
+    repeat = 40
+    title = f"  Dunder Mifflin Paper Company  "
+
+    print("\n" + Color.YELLOW + "*" * repeat)
+    print(f"{title:*^{repeat}}")
+    print("*" * repeat + Color.RESET)
+
+
 def main():
     # Banner
-    repeat = 40
-    title = " Dunder Mifflin Paper Company "
-    print("\n" + "*"*repeat)
-    print(f"{title:*^{repeat}}")
-    print("*"*repeat + "\n")
-    
-    exit()
+    displayBanner()
 
     # Prompt user to select characteristic (4 at a time)
     selectedCharacteristics: list[str] = getUserSelections()
@@ -37,7 +40,9 @@ def getUserSelections() -> list[str]:
 
     i: int = 0
     while i < len(characteristics):
-        print(f"\nChoose the {seq[i//4]} characteristic you most align with,")
+        print(
+            f"\nChoose the {Color.CYAN}{seq[i//4]}{Color.RESET} characteristic you most align with,"
+        )
 
         # Display Next 4 Characteristics Menu
         for j in range(i, i + 4):
