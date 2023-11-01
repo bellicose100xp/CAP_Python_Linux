@@ -5,33 +5,30 @@ nintendo = {
     "age": 70,
     "employer": "Nintendo",
     "title": "Representative Director",
-    "occupations": [
-        "Game Designer", 
-        "Game Producer", 
-        "Game Director"
-        ],
+    "occupations": ["Game Designer", "Game Producer", "Game Director"],
     "notable_games": [
-        "Mario", 
-        "Donkey Kong", 
-        "The Legend Of Zelda", 
-        "F-Zero", 
-        "Star Fox", 
-        "Pikmin", 
-        "Nintendogs"
-        ]
+        "Mario",
+        "Donkey Kong",
+        "The Legend Of Zelda",
+        "F-Zero",
+        "Star Fox",
+        "Pikmin",
+        "Nintendogs",
+    ],
 }
+
 
 def main():
     exit_menu = False
-    while not exit_menu: 
+    while not exit_menu:
         print("\n\n-- Nintendo Dictionary Manager ---")
         print("1. Get Item Value")
         print("2. Add Item")
-        print("3. Remove Item")            
+        print("3. Remove Item")
         print("4. Exit")
 
         option = input("Select an option: ")
-        
+
         match option:
             case "1":
                 handle_get_item()
@@ -41,7 +38,7 @@ def main():
 
             case "3":
                 handle_delete_item()
-            
+
             case "4":
                 exit_menu = True
                 print("\nExiting...")
@@ -50,8 +47,9 @@ def main():
             case _:
                 print("\nInvalid option, please try again.")
 
+
 def select_dict_key() -> str:
-    key = ""  # placeholder  
+    key = ""  # placeholder
     keys = list(nintendo.keys())
 
     # Display menu
@@ -71,11 +69,13 @@ def select_dict_key() -> str:
             print("Invalid key, please try again.\n")
     return key
 
+
 def handle_get_item():
-    print("\n\n-- Get Item Value ---") 
+    print("\n\n-- Get Item Value ---")
     key = select_dict_key()
     print(f"\n{key}: { nintendo.get(key) }")
-    
+
+
 def handle_add_item():
     print("\n\n-- Add Item ---")
     key = input("Enter key: ")
@@ -84,12 +84,14 @@ def handle_add_item():
     print(f"\nAdded {key} to dictionary.\n")
     pprint(nintendo)
 
+
 def handle_delete_item():
     print("\n\n-- Remove Item --")
     key = select_dict_key()
     del nintendo[key]
-    print(f"\nRemoved {key} from dictionary.\n") 
+    print(f"\nRemoved {key} from dictionary.\n")
     pprint(nintendo)
 
+
 if __name__ == "__main__":
-    main()    
+    main()
