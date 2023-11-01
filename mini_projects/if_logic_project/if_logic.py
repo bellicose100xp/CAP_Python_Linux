@@ -1,11 +1,11 @@
-from if_logic_data import characters, characteristics, characteristicMap
 import random
+from if_logic_data import characters, characteristics, characteristic_map
 from if_logic_colors import Color
 
 
-def displayBanner():
+def display_banner():
     repeat = 40
-    title = f"  Dunder Mifflin Paper Company  "
+    title = "  Dunder Mifflin Paper Company  "
 
     print("\n" + Color.YELLOW + "*" * repeat)
     print(f"{title:*^{repeat}}")
@@ -14,28 +14,28 @@ def displayBanner():
 
 def main():
     # Banner
-    displayBanner()
+    display_banner()
 
     # Prompt user to select characteristic (4 at a time)
-    selectedCharacteristics: list[str] = getUserSelections()
+    selected_characteristics: list[str] = get_user_selections()
 
     # Calculate each character's rank based on selected characteristics
-    ranks = calculateRank(selectedCharacteristics)
+    ranks = calculate_rank(selected_characteristics)
 
     # Find the character with the highest rank, select one randomly if multiple characters matched
-    matchedCharacter = findMatchedCharacter(ranks)
+    matched_character = find_matched_character(ranks)
 
     # Display results
     print(
-        f"\n{Color.BLUE}Your selected characteristics: {selectedCharacteristics} {Color.RESET}"
+        f"\n{Color.BLUE}Your selected characteristics: {selected_characteristics} {Color.RESET}"
     )
     print(
-        f"{Color.YELLOW}The Office character you matched with is: {Color.GREEN}{matchedCharacter}{Color.RESET}"
+        f"{Color.YELLOW}The Office character you matched with is: {Color.GREEN}{matched_character}{Color.RESET}"
     )
 
 
-def getUserSelections() -> list[str]:
-    selectedCharacteristics: list[str] = []
+def get_user_selections() -> list[str]:
+    selected_characteristics: list[str] = []
     seq: list[str] = ["1st", "2nd", "3rd", "4th"]
 
     i: int = 0
@@ -46,12 +46,12 @@ def getUserSelections() -> list[str]:
 
         # Display Next 4 Characteristics Menu
         for j in range(i, i + 4):
-            displayIdx = j % 4
-            print(f"  {displayIdx + 1}. {characteristics[j]}")
+            display_idx = j % 4
+            print(f"  {display_idx + 1}. {characteristics[j]}")
 
         # Proceed only if valid selection
-        validSelection: bool = False
-        while not validSelection:
+        valid_selection: bool = False
+        while not valid_selection:
             selection: str = input("Selection: ")
 
             # Handle Invalid Selection
@@ -61,33 +61,33 @@ def getUserSelections() -> list[str]:
                 )
                 continue
 
-            selectedIdx = int(selection) - 1 + i
-            selectedCharacteristics.append(characteristics[selectedIdx])
-            validSelection = True
+            selected_idx = int(selection) - 1 + i
+            selected_characteristics.append(characteristics[selected_idx])
+            valid_selection = True
 
         # Increment by 4 to select 4 characteristics
         i += 4
-    return selectedCharacteristics
+    return selected_characteristics
 
 
-def calculateRank(selectedCharacteristics: list[str]) -> list[int]:
+def calculate_rank(selected_characteristics: list[str]) -> list[int]:
     ranks: list[int] = [0] * len(characters)
     for i, character in enumerate(characters):
-        for characteristic in selectedCharacteristics:
-            ranks[i] += characteristicMap[character].get(characteristic, 0)
+        for characteristic in selected_characteristics:
+            ranks[i] += characteristic_map[character].get(characteristic, 0)
     return ranks
 
 
-def findMatchedCharacter(ranks: list[int]) -> str:
-    maxRank: int = max(ranks)
-    matchedCharacters: list[str] = []
+def find_matched_character(ranks: list[int]) -> str:
+    max_rank: int = max(ranks)
+    matched_characters: list[str] = []
     for i, rank in enumerate(ranks):
-        if rank == maxRank:
-            matchedCharacters.append(characters[i])
+        if rank == max_rank:
+            matched_characters.append(characters[i])
 
     # choose one character randomly
-    matchedCharacter = random.choice(matchedCharacters)
-    return matchedCharacter
+    matched_character = random.choice(matched_characters)
+    return matched_character
 
 
 if __name__ == "__main__":

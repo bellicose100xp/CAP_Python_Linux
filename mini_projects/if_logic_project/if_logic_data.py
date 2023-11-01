@@ -18,19 +18,19 @@ characteristics: list[str] = [
 ]
 
 characters: list[str] = [
-"Michael Scott",
-"Dwight Schrute",
-"Jim Halpert",
-"Pam Beesly",
-"Andy Bernard",
-"Stanley Hudson",
-"Kevin Malone",
-"Angela Martin",
-"Oscar Martinez",
-"Kelly Kapoor"
+    "Michael Scott",
+    "Dwight Schrute",
+    "Jim Halpert",
+    "Pam Beesly",
+    "Andy Bernard",
+    "Stanley Hudson",
+    "Kevin Malone",
+    "Angela Martin",
+    "Oscar Martinez",
+    "Kelly Kapoor",
 ]
 
-characteristicMap: dict[str, dict[str, int]] = {
+characteristic_map: dict[str, dict[str, int]] = {
     "Michael Scott": {
         "Witty": 3,
         "Eccentric": 3,
