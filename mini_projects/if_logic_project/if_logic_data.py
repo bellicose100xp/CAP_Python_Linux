@@ -1,0 +1,103 @@
+characteristics: list[str] = [
+    "Witty",
+    "Eccentric",
+    "Caring",
+    "Competitive",
+    "Laid-back",
+    "Sarcastic",
+    "Artistic",
+    "Reserved",
+    "Insecure",
+    "Hardworking",
+    "Organized",
+    "Intelligent",
+    "Enthusiastic",
+    "Fashionista",
+    "Opinionated",
+    "Charming",
+]
+
+characters: list[str] = [
+"Michael Scott",
+"Dwight Schrute",
+"Jim Halpert",
+"Pam Beesly",
+"Andy Bernard",
+"Stanley Hudson",
+"Kevin Malone",
+"Angela Martin",
+"Oscar Martinez",
+"Kelly Kapoor"
+]
+
+characteristicMap: dict[str, dict[str, int]] = {
+    "Michael Scott": {
+        "Witty": 1,
+        "Eccentric": 1,
+        "Caring": 1,
+        "Sarcastic": 1,
+        "Insecure": 1,
+        "Hardworking": 1,
+        "Enthusiastic": 1,
+        "Opinionated": 1,
+    },
+    "Dwight Schrute": {
+        "Eccentric": 1,
+        "Competitive": 1,
+        "Hardworking": 1,
+        "Organized": 1,
+        "Enthusiastic": 1,
+        "Opinionated": 1,
+    },
+    "Jim Halpert": {
+        "Witty": 1,
+        "Laid-back": 1,
+        "Sarcastic": 1,
+        "Intelligent": 1,
+        "Charming": 1,
+    },
+    "Pam Beesly": {
+        "Caring": 1,
+        "Artistic": 1,
+        "Reserved": 1,
+        "Intelligent": 1,
+        "Charming": 1,
+    },
+    "Andy Bernard": {
+        "Insecure": 1,
+        "Hardworking": 1,
+        "Enthusiastic": 1,
+        "Fashionista": 1,
+    },
+    "Stanley Hudson": {
+        "Laid-back": 1,
+        "Reserved": 1,
+        "Hardworking": 1,
+        "Organized": 1,
+    },
+    "Kevin Malone": {
+        "Laid-back": 1,
+        "Reserved": 1,
+        "Charming": 1,
+    },
+    "Angela Martin": {
+        "Competitive": 1,
+        "Insecure": 1,
+        "Hardworking": 1,
+        "Organized": 1,
+        "Intelligent": 1,
+        "Opinionated": 1,
+    },
+    "Oscar Martinez": {
+        "Caring": 1,
+        "Reserved": 1,
+        "Organized": 1,
+        "Intelligent": 1,
+    },
+    "Kelly Kapoor": {
+        "Sarcastic": 1,
+        "Insecure": 1,
+        "Enthusiastic": 1,
+        "Fashionista": 1,
+    },
+}
