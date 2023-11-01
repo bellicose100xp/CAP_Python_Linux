@@ -21,11 +21,12 @@ nintendo = {
 def main():
     exit_menu = False
     while not exit_menu:
-        print("\n\n-- Nintendo Dictionary Manager ---")
-        print("1. Get Item Value")
-        print("2. Add Item")
-        print("3. Remove Item")
-        print("4. Exit")
+        title = " Nintendo Dictionary Manager "
+        print(f"\n\n{title:-^35}")
+        print("  1. Get Item Value")
+        print("  2. Add Item")
+        print("  3. Remove Item")
+        print("  4. Exit")
 
         option = input("Select an option: ")
 
