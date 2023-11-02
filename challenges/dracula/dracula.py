@@ -2,8 +2,8 @@ def main():
     count = 0
     with open(
         "/home/student/mycode/challenges/dracula/dracula.txt", encoding="utf-8"
-    ) as f:
-        for line in f:
+    ) as file:
+        for line in file:
             if "vampire" in line.lower():
                 print(line, end="")
                 count += 1
