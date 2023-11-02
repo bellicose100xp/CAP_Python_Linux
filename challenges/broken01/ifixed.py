@@ -20,7 +20,7 @@ while calc1 != "q":
     operation = input()
     if operation == "+":
         print("\n" + str(calc1) + " + " + str(calc2) + " = " + str(calc1 + calc2))
-    elif operation == '-':
+    elif operation == "-":
         print("\n" + str(calc1) + " - " + str(calc2) + " = " + str(calc1 - calc2))
     else:
         print("\n Not a valid entry. Restarting...")
