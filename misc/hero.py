@@ -16,8 +16,14 @@ class Player:
         target.health -= self.strength
 
 
+class Wizard(Player):
+    def __init__(self):
+        self.magic = 10
+
+
 zack = Player()
 gen = Player()
+
 
 print("Zack Zombie's Health", zack.health)
 

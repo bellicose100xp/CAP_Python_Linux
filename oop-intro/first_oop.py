@@ -13,7 +13,7 @@ class Player:
     # a function defined within a class is a "method"
     def roll(self):
         self.dice = []  # clears current dice
-        for i in range(3):  # make 3 rolls
+        for _ in range(3):  # make 3 rolls
             self.dice.append(randint(1, 6))  # 1 to 6 inclusive
 
     # a function defined within a class is a "method"
