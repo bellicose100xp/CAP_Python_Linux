@@ -35,3 +35,8 @@ class Cheat_Loaded_Dice(Player):  # inheritance of Player
             if self.dice[i] < 6:
                 self.dice[i] += 1
             i += 1
+
+
+class CheatHeavilyLoaded(Player):
+    def cheat(self):
+        self.dice = list(map(lambda x: randint(4, 6) if x < 4 else x, self.dice))
