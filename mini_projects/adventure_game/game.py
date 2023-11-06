@@ -1,13 +1,21 @@
 #!/usr/bin/python3
 """Text Based Adventure Game"""
+from typing import TypeAlias, Literal
 from room import Room, kitchen, dining_room, basement, garden
 from player import Player, PlayerState
 from styling import Color, Style
 from utils import clear_terminal
 from directions import Direction, get_direction_from_str
 
-VALID_COMMANDS: list[str] = ["go", "collect", "get"]
-COLLECTIBLES: list[str] = ["key", "watch", "potion", "broomstick"]
+
+# Type aliases
+Commands: TypeAlias = list[Literal["go"] | Literal["collect"] | Literal["get"]]
+Collectibles: TypeAlias = list[
+    Literal["key"] | Literal["watch"] | Literal["potion"] | Literal["broomstick"]
+]
+
+VALID_COMMANDS: Commands = ["go", "collect", "get"]
+COLLECTIBLES: Collectibles = ["key", "watch", "potion", "broomstick"]
 STARTER_ROOM: Room = dining_room
 
 
@@ -24,6 +32,7 @@ def main():
 
     # breaking this while loop means the game is over
     game_loop(current_room, player)
+
 
 # Shows various stats about the player
 def show_player_status(player: Player):
@@ -55,7 +64,8 @@ def get_player_name(player: Player):
             player.name = player_name
             valid_name = True
 
-# Main game loop, that runs until player wins or dies 
+
+# Main game loop, that runs until player wins or dies
 def game_loop(current_room: Room, player: Player):
     while True:
         # Clear terminal on each run (both unix and windows terminal are accounted for)
@@ -84,7 +94,7 @@ def game_loop(current_room: Room, player: Player):
 
                         player.weapons.remove("flamethrower")
                         kitchen.danger = ""
-                        input(f"\nPress any key to continue")
+                        input("\nPress any key to continue")
                     else:
                         print(
                             f"{Color.RED}Monster lunged at you and killed you!{Color.RESET}"
@@ -103,7 +113,7 @@ def game_loop(current_room: Room, player: Player):
 
                         player.weapons.remove("spell")
                         basement.danger = ""
-                        input(f"\nPress any key to continue")
+                        input("\nPress any key to continue")
                     else:
                         print(
                             f"{Color.RED}Witch grabbed you, put you in hot cauldron, and killed you!{Color.RESET}"
@@ -213,11 +223,6 @@ def process_user_input(current_room: Room, player: Player) -> Room:
                 input("\nPress any key to continue...")
                 break
 
-            case _:
-                print(
-                    f"{Color.RED}Uh oh! That command is not quite right!{Color.RESET}"
-                )
-                continue
     return current_room
 
 
