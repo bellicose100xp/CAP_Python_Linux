@@ -9,10 +9,8 @@ from directions import Direction, get_direction_from_str
 
 
 # Type aliases
-Commands: TypeAlias = list[Literal["go"] | Literal["collect"] | Literal["get"]]
-Collectibles: TypeAlias = list[
-    Literal["key"] | Literal["watch"] | Literal["potion"] | Literal["broomstick"]
-]
+Commands: TypeAlias = list[Literal["go", "collect", "get"]]
+Collectibles: TypeAlias = list[Literal["key", "watch", "potion", "broomstick"]]
 
 VALID_COMMANDS: Commands = ["go", "collect", "get"]
 COLLECTIBLES: Collectibles = ["key", "watch", "potion", "broomstick"]
