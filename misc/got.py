@@ -40,13 +40,13 @@ def main():
     print(f"\nName: {char_res_json['name']}")
     print(f"\nAliases: {', '.join(char_res_json['aliases'])}")
 
-    print(f"\nBooks: ")
+    print("\nBooks: ")
     for book in char_res_json["povBooks"]:
         book_idx = book.split("/")[-1]
         book_name = books_res_json[int(book_idx) - 1]["name"]
         print(f"* {book_name}")
 
-    print(f"\nHouses: ")
+    print("\nHouses: ")
     for house in char_res_json["allegiances"]:
         house_idx = house.split("/")[-1]
         house_req = f"{houses_api}/{house_idx}"
