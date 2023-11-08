@@ -1,9 +1,7 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 # app represents the web app we are building
 app = Flask(__name__)
-
-# the following code teaches our app "how to app"
 
 
 @app.route("/")
@@ -11,9 +9,24 @@ def hello_world():
     return "Hello World"
 
 
-@app.route("/characters")
+@app.route("/char")
 def get_characters():
     return "You know nothing, Jon Snow"
+
+
+# with route params
+@app.route("/char/<someone>")
+def get_specific_character(someone: str):
+    return f"You know nothing, {someone}"
+
+
+# redirection
+@app.route("/c/<someone>")
+def get_short_character(someone: str):
+    # return redirect(f"/char/{someone}")
+    # same as above but more flexible when we need to change route in future
+    # as it doesn't depend on the harcoded url
+    return redirect(url_for("get_specific_character", someone=someone))
 
 
 @app.route("/books")
