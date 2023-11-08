@@ -45,6 +45,7 @@ def main():
     selected_category = input("\nPlease select a category:\n> ")
 
     # Select Types of Question
+    print("")
     for category_id, question in enumerate(QUESTION_TYPES):
         print(f"{category_id+1}. {question}")
 
@@ -52,6 +53,7 @@ def main():
     api_type = QUESTION_TYPES[int(selected_type) - 1]
 
     # Select Question Difficulty Level
+    print("")
     for category_id, difficulty in enumerate(DIFFICULTIES):
         print(f"{category_id+1}. {difficulty}")
 
@@ -59,7 +61,8 @@ def main():
     api_difficulty = DIFFICULTIES[int(selected_difficulty) - 1]
 
     # Select the number of questioins
-    selected_quantity = input("\nPlease select a quantity:\n> ")
+    print("")
+    selected_quantity = input("\nHow many questions do you want:\n> ")
     api_quantity = int(selected_quantity)
 
     # Add or remove api_type if "any" option was selected
@@ -76,16 +79,19 @@ def main():
     )
 
     res = requests.get(url, timeout=5)
-
     data = res.json()
+
     questions = data["results"]
     total_questions: int = len(questions)
 
     # If no questions received, exit the program
     if not total_questions:
-        print("No questions found. Please try again.")
+        print(
+            "\n Sorry! Nothing found for selected combination. Please try again with different combinatinon or lower number of questions."
+        )
         return
 
+    # keep track of correctly answerd questions
     answered_correctly: int = 0
     question_num: int = 1
 
@@ -97,7 +103,7 @@ def main():
         ]
 
         options.append(correct_answer)
-        random.shuffle(options)
+        random.shuffle(options) # shuffle the answers
 
         # List question
         print(f"\nQuestion {question_num}: {html.unescape(question['question'])}")
@@ -106,7 +112,7 @@ def main():
 
         valid_selection = False
         selected_num: int = -1
-        print("Please select an option:")
+        print("\nPlease select an option:")
 
         # Get user input (validated)
         while not valid_selection:
