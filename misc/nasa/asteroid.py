@@ -33,10 +33,6 @@ def main():
     ## update the date below, if you like
     start_date = "start_date=2019-11-11"
 
-    ## the value below is not being used in this
-    ## version of the script
-    # end_date = "end_date=END_DATE"
-
     # make a request with the request library
     api_request = requests.get(URL + start_date + "&" + nasa_creds, timeout=10)
 
@@ -57,19 +53,24 @@ def main():
             curr_diameter = float(
                 asteroid["estimated_diameter"]["miles"]["estimated_diameter_max"]
             )
+
             if biggest_diameter < curr_diameter:
                 biggest_diameter = curr_diameter
                 biggest_idx = idx
 
+
+            # check fastest speed
             curr_speed = float(
                 asteroid["close_approach_data"][0]["relative_velocity"][
                     "miles_per_hour"
                 ]
             )
+
             if fastest_speed < curr_speed:
                 fastest_speed = curr_speed
                 fastest_idx = idx
 
+            # check smallest distance
             curr_distance = float(
                 asteroid["close_approach_data"][0]["miss_distance"]["miles"]
             )
