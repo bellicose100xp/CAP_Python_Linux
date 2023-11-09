@@ -39,7 +39,7 @@ def start():
     return html
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.form.get("nm"):
         answer = request.form.get("nm")
