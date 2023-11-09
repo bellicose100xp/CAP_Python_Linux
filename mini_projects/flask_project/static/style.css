@@ -1,0 +1,47 @@
+#main-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    & form {
+        display: flex;
+        flex-flow: column nowrap;
+
+        & button {
+            align-self: center;
+        }
+    }
+}
+
+
+#search-output {
+    display: none;
+    width: 80%;
+    margin-top: 2em;
+}
+
+#error-output {
+    display: none;
+}
+
+#title-card {
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+#sources-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+
+}
+
+#flag-image {
+    width: 50px;
+    float: right;
+}

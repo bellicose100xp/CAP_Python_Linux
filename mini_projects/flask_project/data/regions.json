@@ -1,0 +1,380 @@
+[
+    {
+        "country": "US",
+        "name": "USA",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/usFlag2.png",
+        "data_tier": 1,
+        "plan_enabled": true
+    },
+    {
+        "country": "CA",
+        "name": "Canada",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagCA.png",
+        "data_tier": 1,
+        "plan_enabled": false
+    },
+    {
+        "country": "GB",
+        "name": "Great Britain",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagGB.png",
+        "data_tier": 1,
+        "plan_enabled": false
+    },
+    {
+        "country": "AU",
+        "name": "Australia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagAU.png",
+        "data_tier": 1,
+        "plan_enabled": false
+    },
+    {
+        "country": "AR",
+        "name": "Argentina",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagAR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "BE",
+        "name": "Belgium",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagBE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "BG",
+        "name": "Bulgaria",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagBG.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "BR",
+        "name": "Brazil",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagBR.png",
+        "data_tier": 1,
+        "plan_enabled": false
+    },
+    {
+        "country": "CL",
+        "name": "Chile",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagCL.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "CO",
+        "name": "Colombia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagCO.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "HR",
+        "name": "Croatia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagHR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "CZ",
+        "name": "Czech Republic",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagCZ.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "DK",
+        "name": "Denmark",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagDK.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "EC",
+        "name": "Ecuador",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagEC.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "EE",
+        "name": "Estonia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagEE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "FI",
+        "name": "Finland",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagFI.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "FR",
+        "name": "France",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagFR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "DE",
+        "name": "Germany",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagDE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "GR",
+        "name": "Greece",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagGR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "HK",
+        "name": "Hong Kong",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagHK.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "HU",
+        "name": "Hungary",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagHU.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "IS",
+        "name": "Iceland",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagIS.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "IN",
+        "name": "India",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagIN.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "ID",
+        "name": "Indonesia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagID.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "IE",
+        "name": "Ireland",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagIE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "IL",
+        "name": "Israel",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagIL.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "IT",
+        "name": "Italy",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagIT.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "AT",
+        "name": "Austria",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagAT.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "AE",
+        "name": "United Arab Emirates",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagAE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "JP",
+        "name": "Japan",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagJP.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "LT",
+        "name": "Lithuania",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagLT.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "MY",
+        "name": "Malaysia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagMY.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "MX",
+        "name": "Mexico",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagMX.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "NL",
+        "name": "Netherlands",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagNL.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "NZ",
+        "name": "New Zealand",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagNZ.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "NO",
+        "name": "Norway",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagNO.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "PA",
+        "name": "Panama",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagPA.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "PE",
+        "name": "Peru",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagPE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "PH",
+        "name": "Philippines",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagPH.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "PL",
+        "name": "Poland",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagPL.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "PT",
+        "name": "Portugal",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagPT.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "RO",
+        "name": "Romania",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagRO.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "RU",
+        "name": "Russia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagRU.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "RS",
+        "name": "Serbia",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagRS.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "SG",
+        "name": "Singapore",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagSG.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "ZA",
+        "name": "South Africa",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagZA.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "KR",
+        "name": "South Korea",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagKR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "ES",
+        "name": "Spain",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagES.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "SE",
+        "name": "Sweden",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagSE.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "CH",
+        "name": "Switzerland",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagCH.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "TH",
+        "name": "Thailand",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagTH.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "TR",
+        "name": "Turkey",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagTR.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "UA",
+        "name": "Ukraine",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagMX.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    },
+    {
+        "country": "VN",
+        "name": "Vietnam",
+        "flag": "https://cdn.watchmode.com/misc_images/icons/flagVN.png",
+        "data_tier": 2,
+        "plan_enabled": false
+    }
+]

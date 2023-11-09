@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block content %}
+<!-- Title Card -->
+<div id="title-card" class="card mb-3 mt-2" style="max-width: 540px">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{data.poster}}" class="img-fluid rounded-start" alt="..." />
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ data.title }} ({{ data.year }})</h5>
+                <p class="card-text title-description">{{ data.plot_overview}}</p>
+                <p class="card-text">
+                    <small class="text-body-secondary">{{ data.genre_names|join(', ') }}</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sources Gallery -->
+
+<div id="sources-container">
+    {% if not data.sources %}
+    <div class="text-center text-danger fw-bold mt-3">
+        No available sources found for this title! Please try another title!
+    </div>
+    {% else %} {% for source in data.sources %}
+    <div class="card">
+        <div class="card-body text-center">
+            <img src="{{source.url}}" class=""" alt="...">
+            <h5 class="card-title">{{source.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Type: </strong>{{source.type}}</li>
+            <li class="list-group-item">
+                <strong>Region: </strong>{{source.region}}
+                <img id="flag-image" src="{{source.flag_url}}" alt="" />
+            </li>
+            <li class="list-group-item"><strong>Format: </strong>{{source.format}}</li>
+        </ul>
+        <div class="card-footer text-body-secondary">
+            <a href="{{source.web_url}}" class="card-link">Watch Now</a>
+        </div>
+    </div>
+
+    {% endfor %} {% endif %}
+</div>
+
+{% endblock %}
